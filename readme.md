@@ -581,6 +581,43 @@ Massey–Omura Cryptosystem
 ---
 
 ## Example
+The following screenshot shows a simulation run with 240 voters and 2 candidates (A and B). The blockchain records each vote as a transaction, grouped into mined blocks with unique hashes.
+
+
+🔍 What's Visible:
+✅ Block Mining Output:
+
+Each mined block displays:
+
+Block ID
+
+Hash and Previous Hash
+
+Nonce used for proof-of-work
+
+Timestamp, Version, and Difficulty Bits
+
+A list of encrypted transactions (votes)
+The Target value (mining difficulty) gets dynamically adjusted similiar to Bitcoin.
+
+🔄 Encrypted Transactions:
+
+Each vote is stored as a transaction in the blockchain using commutative encryption
+
+Transaction entries reflect anonymized sender/receiver values
+
+🧮 Final Vote Count:
+
+Candidate A received: 129 votes
+
+Candidate B received: 111 votes
+
+🔐 Notes:
+Even though transactions look obfuscated, voters can verify their individual votes through the encryption chain.
+
+This demonstrates a fully simulated, decentralized, and verifiable voting process using the Massey–Omura encryption technique and mental poker principles.
+
+
 ![Output for 240 voters and two Candidates](image.png)
 
 
