@@ -2,7 +2,7 @@
 
 A Python-based simulation of a secure, anonymous, and verifiable voting system using **commutative asymmetric encryption** and a **blockchain-like ledger**. This system enables voters to **cast anonymized votes**, **verify their own votes**, and **tally the results** in a transparent yet private way.
 
-> 🔐 Inspired by the **SRA Mental Poker** protocol and the **Ossey-Mura Cryptosystem**.
+> 🔐 Inspired by the **SRA Mental Poker** protocol and the **Massey-Omura Cryptosystem**.
 
 ---
 
