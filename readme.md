@@ -22,7 +22,7 @@ A Python-based simulation of a secure, anonymous, and verifiable voting system u
 - 🔐 Custom commutative encryption algorithm
 - 📚 Cryptographic principles from:
   - [Mental Poker (SRA Protocol)](https://en.wikipedia.org/wiki/Mental_poker)
-  - [Massey-Omura] (https://en.wikipedia.org/wiki/Massey-Omura-Schema)
+  - [Massey-Omura](https://en.wikipedia.org/wiki/Massey-Omura-Schema)
 
 ---
 
@@ -32,4 +32,9 @@ A Python-based simulation of a secure, anonymous, and verifiable voting system u
 
 ```bash
 git clone https://github.com/yourusername/blockchain-voting-sim.git
-cd blockchain-voting-sim
+cd BBVS-Simulation
+
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
