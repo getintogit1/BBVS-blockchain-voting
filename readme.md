@@ -577,7 +577,12 @@ cd BBVS-Simulation
 pip install -r requirements.txt
 
 # 3. Run main.py
-python main.py
+python main.py ```
+
+## Example
+![Output for 240 voters and two Candidates](image.png)
+
+
 
 
 ## Example Output
