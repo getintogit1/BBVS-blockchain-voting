@@ -568,21 +568,20 @@ Massey–Omura Cryptosystem
 
 ## 📦 Installation & Usage
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/getintogit1/BBVS-Simulation.git
-cd BBVS-Simulation
+    # 1. Clone the repository
+    git clone https://github.com/getintogit1/BBVS-Simulation.git
+    cd BBVS-Simulation
 
-# 2. Install Dependencies
-pip install -r requirements.txt
+    # 2. Install Dependencies
+    pip install -r requirements.txt
 
-# 3. Run main.py
-python main.py ```
+    # 3. Run main.py
+    python main.py 
+
+---
 
 ## Example
 ![Output for 240 voters and two Candidates](image.png)
 
 
 
-
-## Example Output
