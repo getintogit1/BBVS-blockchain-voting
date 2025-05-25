@@ -316,7 +316,7 @@ This property enables anonymous and collaborative encryption/decryption, which i
 ## Mental Poker Protocol
 The Mental Poker protocol by Shamir, Rivest, and Adleman (SRA) allows two or more players to "play" a fair card game without trusting each other, using commutative encryption. In the context of voting, we use this approach to shuffle, encrypt, and anonymously process ballots.
 
-📌 Key Concepts
+Key Concepts
 Every participant has their own commutative public-private key pair: 
 (
 𝑒
@@ -337,7 +337,7 @@ Messages (e.g., votes or cards) are encrypted multiple times, once per participa
 
 Decryption occurs in reverse order of encryption, revealing the original message securely
 
-🔁 Example Flow
+Example Flow
 Let the message (vote/card) be 
 𝑀
 M
@@ -558,8 +558,8 @@ Massey–Omura Cryptosystem
 
 ## 🛠️ Technologies Used
 
-- 🐍 Python 
-- 📚 Cryptographic principles from:
+Python 
+Cryptographic principles from:
   - [Mental Poker (SRA Protocol)](https://en.wikipedia.org/wiki/Mental_poker)
   - [Massey-Omura](https://en.wikipedia.org/wiki/Massey-Omura-Schema)
 
@@ -584,7 +584,6 @@ The following screenshot shows a simulation run with 240 voters and 2 candidates
 
 
 🔍 What's Visible:
-✅ Block Mining Output:
 
 Each mined block displays:
 
@@ -611,7 +610,7 @@ Candidate A received: 129 votes
 
 Candidate B received: 111 votes
 
-🔐 Notes:
+Notes:
 Even though transactions look obfuscated, voters can verify their individual votes through the encryption chain.
 
 This demonstrates a fully simulated, decentralized, and verifiable voting process using the Massey–Omura encryption technique and mental poker principles.
