@@ -558,7 +558,7 @@ Massey–Omura Cryptosystem
 
 ## 🛠️ Technologies Used
 
-Python \br
+Python <br>
 Cryptographic principles from:
   - [Mental Poker (SRA Protocol)](https://en.wikipedia.org/wiki/Mental_poker)
   - [Massey-Omura](https://en.wikipedia.org/wiki/Massey-Omura-Schema)
