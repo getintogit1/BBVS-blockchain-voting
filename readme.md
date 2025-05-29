@@ -16,7 +16,8 @@ A Python-based simulation of a secure, anonymous, and verifiable voting system u
 
 ---
 ## Massey Omura Cryptosystem
-![image](https://github.com/user-attachments/assets/284e86ab-c896-4b04-a816-369cf7e26a90)
+![image](https://github.com/user-attachments/assets/092e709e-648f-4b46-802b-4e75b5166699)
+
 
 ---
 ## Mental Poker Protocol
