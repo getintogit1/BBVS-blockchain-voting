@@ -16,6 +16,8 @@ A Python-based simulation of a secure, anonymous, and verifiable voting system u
 
 ---
 ## Massey Omura Cryptosystem
+Ref:
+- [Buchanan, William J (2025)] (https://asecuritysite.com/commul/massey2)
 ![image](https://github.com/user-attachments/assets/092e709e-648f-4b46-802b-4e75b5166699)
 
 
