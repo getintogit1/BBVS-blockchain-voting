@@ -1,4 +1,4 @@
-# 🗳️ Blockchain-Based Voting System Simulation
+# Blockchain-Based Voting System Simulation
 
 A Python-based simulation of a secure, anonymous, and verifiable voting system using **commutative asymmetric encryption** and a **blockchain-like ledger**. This system enables voters to **cast anonymized votes**, **verify their own votes**, and **tally the results** in a transparent yet private way.
 
@@ -6,13 +6,13 @@ A Python-based simulation of a secure, anonymous, and verifiable voting system u
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ **Anonymous Voting** – Cast encrypted votes while preserving voter privacy.
-- 🔐 **Commutative Asymmetric Encryption** – Enables encryption/decryption in any order without compromising results.
-- 🔎 **Vote Verification** – Each voter can verify that their vote is included in the ledger.
-- 📊 **Secure Vote Counting** – Votes are decrypted and tallied securely.
-- ⛓️ **Blockchain Simulation** – Each vote is a block in a linked chain to ensure transparency and immutability.
+- **Anonymous Voting** – Cast encrypted votes while preserving voter privacy.
+- **Commutative Asymmetric Encryption** – Enables encryption/decryption in any order without compromising results.
+- **Vote Verification** – Each voter can verify that their vote is included in the ledger.
+- **Secure Vote Counting** – Votes are decrypted and tallied securely.
+- **Blockchain Simulation** – Each vote is a block in a linked chain to ensure transparency and immutability.
 
 ---
 ## Massey Omura Cryptosystem
@@ -239,14 +239,14 @@ a
 a
 ​
  ,M))
-✅ Properties
+Properties
 Privacy: No single party knows the full vote before collaborative decryption
 
 Fairness: All parties apply and remove encryption without learning the vote
 
 Commutativity: Order of encryption and decryption doesn't affect correctness
 
-🗳️ Why Use This in Voting?
+Why Use This in Voting?
 This protocol ensures that:
 
 Voters don't trust a central authority
@@ -255,17 +255,17 @@ Ballots are shuffled and anonymized
 
 Anyone can verify that their vote was included and not altered
 
-🔐 Combined with Massey–Omura
+Combined with Massey–Omura
 When combined with the Massey–Omura cryptosystem, this approach forms the backbone of secure, anonymous, verifiable voting simulations—like the one implemented in this project.
 
-📖 Further Reading
+Further Reading
 SRA Mental Poker Paper (1979)
 
 Massey–Omura Cryptosystem
 
 ---
 
-## 🛠️ Technologies Used
+## References
 
 Python <br>
 Cryptographic principles from:
