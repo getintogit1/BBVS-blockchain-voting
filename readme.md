@@ -43,11 +43,6 @@ Anyone can verify that their vote was included and not altered
 Combined with Massey–Omura
 When combined with the Massey–Omura cryptosystem, this approach forms the backbone of secure, anonymous, verifiable voting simulations—like the one implemented in this project.
 
-Further Reading
-SRA Mental Poker Paper (1979)
-
-Massey–Omura Cryptosystem
-
 ---
 
 ## References
