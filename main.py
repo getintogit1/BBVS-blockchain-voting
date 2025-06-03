@@ -39,6 +39,7 @@ def main():
     keys = generateKeyPair(PRIME, participant_names)
 
     wHashes_owner_key_remaining = encryptAndDecrypt(wallet_hashes, FRAGMENT_SIZE, PRIME, keys, participant_names, wallets) 
+    random.shuffle(wallets)
     votesA, votesB = makeAndCountVotes(wallets, blockchain, NUM_OF_BLOCKS, VOTES_PER_BLOCK)
     storeBlockChain(blockchain)
     print("Votes A: ", votesA) 
