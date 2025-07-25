@@ -21,14 +21,14 @@ def littleEndianToInt(b):
 
 def targetToBits(target: int) -> bytes:
     raw_bytes = target.to_bytes(32, "big")
-    raw_bytes = raw_bytes.lstrip(b"\x00")                                       # <1>
-    if raw_bytes[0] > 0x7F:                                                     # <2>
+    raw_bytes = raw_bytes.lstrip(b"\x00")                                    
+    if raw_bytes[0] > 0x7F:                                                   
         exponent = len(raw_bytes) + 1
         coefficient = b"\x00" + raw_bytes[:2]
     else:
-        exponent = len(raw_bytes)                                               # <3>
-        coefficient = raw_bytes[:3]                                             # <4>
-    new_bits = coefficient[::-1] + bytes([exponent])                            # <5>
+        exponent = len(raw_bytes)                                              
+        coefficient = raw_bytes[:3]                                             
+    new_bits = coefficient[::-1] + bytes([exponent])                           
     return new_bits
 
 
