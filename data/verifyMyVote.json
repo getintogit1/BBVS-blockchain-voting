@@ -1,8 +1,8 @@
 {
-    "Your Name": "Zachary Hines",
-    "Your Hash other people can see": "OH\u0083(\u00f3\u00a1\u00a8\u00feA\u00e2}\u00ff&\u009c\u00dd\u007f7\u00dc\u0087g/\u00e3/\u000b\u001b\u00f8e\u00a0\u00dc\u00c1\u00c7\u00da\u0099\u00c8\u00bb\u00dd\\\u00f0\u0081\u00f6B\u00c2(ef\u009cC\u0086E\u00fa\u0002O^\u009d\u001d'#\u00abH\u00f1\u00e4_I`",
-    "Original Wallet Hash (from init)": "fb4f0a2c44e72589a7538e1892528760173fb0f73ee42e66478681f8811fb7df",
-    "Recovered Original Hash (After Final Decryption)": "fb4f0a2c44e72589a7538e1892528760173fb0f73ee42e66478681f8811fb7df",
-    "Re-Encrypted Hash (Just with Your Key)": "OH\u0083(\u00f3\u00a1\u00a8\u00feA\u00e2}\u00ff&\u009c\u00dd\u007f7\u00dc\u0087g/\u00e3/\u000b\u001b\u00f8e\u00a0\u00dc\u00c1\u00c7\u00da\u0099\u00c8\u00bb\u00dd\\\u00f0\u0081\u00f6B\u00c2(ef\u009cC\u0086E\u00fa\u0002O^\u009d\u001d'#\u00abH\u00f1\u00e4_I`",
-    "To verify if your vote got couted look in Blockchain for": "OH\u0083(\u00f3\u00a1\u00a8\u00feA\u00e2}\u00ff&\u009c\u00dd\u007f7\u00dc\u0087g/\u00e3/\u000b\u001b\u00f8e\u00a0\u00dc\u00c1\u00c7\u00da\u0099\u00c8\u00bb\u00dd\\\u00f0\u0081\u00f6B\u00c2(ef\u009cC\u0086E\u00fa\u0002O^\u009d\u001d'#\u00abH\u00f1\u00e4_I`"
+    "Your Name": "Jeffrey Ramos",
+    "Your Hash other people can see": "#\u00aa@\u00bf*\u009f\u0015\u00de\u0016l\u00c2\u0091\u00b9\u00e8\u00cd\u00c79\u00d6\u00108%\u0000$\u00a1+\u00f1\u00fd0l\u00b6\u00a6\\\u0098\u00d4\u00de)S\u0006\u00c5\u0007\u00a3\u001d\\A)\u00f5<\u0003lL\u00d2\u00feV\u0082)\u008cvV\u00af&\u00bf\u00dfa4",
+    "Original Wallet Hash (from init)": "7b8fabbfe48569be74afac1af93cc9c754e96fa3e8877acee3b876854df61169",
+    "Some Hash belonging to any voter - not traceable to you": "0262f27b7c9c999f28777becfbcee3d5c6ea970204454c62771e85ec81dc31b4",
+    "Re-Encrypted Hash (Just with Your Key)": "#\u00aa@\u00bf*\u009f\u0015\u00de\u0016l\u00c2\u0091\u00b9\u00e8\u00cd\u00c79\u00d6\u00108%\u0000$\u00a1+\u00f1\u00fd0l\u00b6\u00a6\\\u0098\u00d4\u00de)S\u0006\u00c5\u0007\u00a3\u001d\\A)\u00f5<\u0003lL\u00d2\u00feV\u0082)\u008cvV\u00af&\u00bf\u00dfa4",
+    "To verify if your vote got couted look in Blockchain for": "#\u00aa@\u00bf*\u009f\u0015\u00de\u0016l\u00c2\u0091\u00b9\u00e8\u00cd\u00c79\u00d6\u00108%\u0000$\u00a1+\u00f1\u00fd0l\u00b6\u00a6\\\u0098\u00d4\u00de)S\u0006\u00c5\u0007\u00a3\u001d\\A)\u00f5<\u0003lL\u00d2\u00feV\u0082)\u008cvV\u00af&\u00bf\u00dfa4"
 }

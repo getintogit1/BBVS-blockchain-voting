@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
 from Crypto.Hash import RIPEMD160
-from hashlib import sha256
 import hashlib
 
 
 def hash256(s):
     return hashlib.sha256(hashlib.sha256(s).digest()).digest()
 
+
 def hash160(s):
-    return RIPEMD160.new(sha256(s).digest()).digest()
+    return RIPEMD160.new(hashlib.sha256(s).digest()).digest()
+
 
 def intToLittleEndian(n, length):
     return n.to_bytes(length, "little")
@@ -21,6 +22,7 @@ def littleEndianToInt(b):
 
 def targetToBits(target: int) -> bytes:
     raw_bytes = target.to_bytes(32, "big")
+<<<<<<< HEAD
     raw_bytes = raw_bytes.lstrip(b"\x00")                                    
     if raw_bytes[0] > 0x7F:                                                   
         exponent = len(raw_bytes) + 1
@@ -29,8 +31,14 @@ def targetToBits(target: int) -> bytes:
         exponent = len(raw_bytes)                                              
         coefficient = raw_bytes[:3]                                             
     new_bits = coefficient[::-1] + bytes([exponent])                           
+=======
+    raw_bytes = raw_bytes.lstrip(b"\x00")
+    if raw_bytes[0] > 0x7F:
+        exponent = len(raw_bytes) + 1
+        coefficient = b"\x00" + raw_bytes[:2]
+    else:
+        exponent = len(raw_bytes)
+        coefficient = raw_bytes[:3]
+    new_bits = coefficient[::-1] + bytes([exponent])
+>>>>>>> a77e333 (fixed core bug)
     return new_bits
-
-
-
-

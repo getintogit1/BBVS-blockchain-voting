@@ -5,14 +5,10 @@ from Crypto.Random          import get_random_bytes
 from blockchain.wallet      import InitialWallet, Wallet
 from blockchain.blockchain  import Blockchain
 from utils.votingFunctions  import makeAndCountVotes, makeInitialTransactions 
-from utils.writeLogs        import writeLog, storeBlockChain
+from utils.writeLogs        import storeBlockChain
 from utils.utils            import getUserInput, createFakeNames
-from utils.encryptionDecryptionFunctions import(
-    generateKeyPair,
-    encryptAndDecrypt,  
-    fullyDecryptOneHash,
-    encryptWalletHashWithKey
-)
+from voter.voter            import Voter
+from utils.encryptionDecryptionFunctions import encryptAndDecrypt  
 import random
 
 
@@ -24,37 +20,44 @@ def main():
 
     # Blockchain Setup
     blockchain = Blockchain()
+    initial_wallet = InitialWallet(NUMBER_OF_VOTERS)
     wallets = [Wallet() for _ in range(NUMBER_OF_VOTERS)]
-    random.shuffle(wallets)
-    wallet_hashes = [w.hash for w in wallets]
-    random.shuffle(wallet_hashes)
-    initial_wallet= InitialWallet(NUMBER_OF_VOTERS)
+
     makeInitialTransactions(initial_wallet, wallets, blockchain)
+    storeBlockChain(blockchain)
 
     # Params for Commutative Encryption
     primebits = 64
     PRIME = getPrime(primebits, randfunc=get_random_bytes)
-    FRAGMENT_SIZE = primebits // 8
+    FRAGMENT_SIZE = primebits // 8                                              
     participant_names = createFakeNames(NUMBER_OF_VOTERS)
-    keys = generateKeyPair(PRIME, participant_names)
 
+<<<<<<< HEAD
     wHashes_owner_key_remaining = encryptAndDecrypt(wallet_hashes, FRAGMENT_SIZE, PRIME, keys, participant_names, wallets) 
     random.shuffle(wallets)
     votesA, votesB = makeAndCountVotes(wallets, blockchain, NUM_OF_BLOCKS, VOTES_PER_BLOCK)
+=======
+    # Voters Setup
+    voters = []
+    for name, wallet in zip(participant_names, wallets):
+        choice = random.choices(["A","B"])
+        voter = Voter(name, wallet, choice)
+        voter.generateKeyPair(PRIME)
+        voter._initial_wallet_address = voter._wallet.address
+        voters.append(voter)
+
+    encryptAndDecrypt(voters, FRAGMENT_SIZE, PRIME) 
+    
+    voter = voters[MYID]
+    voter.verify_my_vote( FRAGMENT_SIZE, PRIME, "data/verifyMyVote.json")
+    
+    random.shuffle(voters) # voter wählen in der regel zufällig und nithct 1:1 in der Reihenfolge in der sie ihre wahlunterlagen erhalten haben
+    votesA, votesB = makeAndCountVotes(voters, blockchain, NUM_OF_BLOCKS, VOTES_PER_BLOCK)
+>>>>>>> a77e333 (fixed core bug)
     storeBlockChain(blockchain)
     print("Votes A: ", votesA) 
     print("Votes B: ", votesB)
-     
-    # Simulating A Voter That Knows His Private key Can see His Vote in the log created + lock up in blockchain
-    w_hash_others_can_see = wHashes_owner_key_remaining[MYID]
-    owner = participant_names[MYID]
-    my_key_decryption = keys[owner]["d"]
-    original_hash = fullyDecryptOneHash(w_hash_others_can_see   , my_key_decryption, FRAGMENT_SIZE, PRIME)
-    my_key_encryption = keys[participant_names[MYID]]["e"]
-    one_key_encrypted_hash =  encryptWalletHashWithKey(original_hash, my_key_encryption, FRAGMENT_SIZE, PRIME)
-    log_file_path = "data/verifyMyVote.json"
-    writeLog(log_file_path, owner, w_hash_others_can_see, original_hash, one_key_encrypted_hash)
-  
+    
 
 if __name__ == "__main__":
     main()

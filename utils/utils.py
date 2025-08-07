@@ -24,7 +24,7 @@ def getUserInput():
     while True:
         VOTES_PER_BLOCK = int(input("Enter number of votes per block: "))
         NUMBER_OF_VOTERS = int(input("Enter number of voters: "))
-        MYID = int(input("Enter number of your ID: "))
+        MYID = int(input("Enter number of your ID: ")) - 1
         if NUMBER_OF_VOTERS % VOTES_PER_BLOCK == 0 and MYID < NUMBER_OF_VOTERS :
             break
         else:

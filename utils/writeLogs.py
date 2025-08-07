@@ -3,12 +3,12 @@
 import json
 
 
-def writeLog(log_file_path, owner, w_hash_others_can_see, original_hash, one_key_encrypted_hash):
+def writeLog(log_file_path, owner, w_hash_others_can_see, hash_belonging_to_anybody, one_key_encrypted_hash, original_hash):
     log_entry = {
     "Your Name": owner,
     "Your Hash other people can see": w_hash_others_can_see,
     "Original Wallet Hash (from init)": original_hash,
-    "Recovered Original Hash (After Final Decryption)": original_hash,
+    "Some Hash belonging to any voter - not traceable to you": hash_belonging_to_anybody,
     "Re-Encrypted Hash (Just with Your Key)": one_key_encrypted_hash,
     "To verify if your vote got couted look in Blockchain for": one_key_encrypted_hash
     }    
@@ -21,7 +21,8 @@ def writeLog(log_file_path, owner, w_hash_others_can_see, original_hash, one_key
 def storeBlockChain(blockchain):
     with open("data/blockchain.json", "w") as f:
         chain_data = [blockToDict(block) for block in blockchain.chain]
-        json.dump(chain_data, f, indent=2)
+        json.dump(chain_data, f, ensure_ascii=True, indent=2)
+
 
 
 def blockToDict(block):
