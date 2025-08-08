@@ -14,6 +14,32 @@ class Voter:
         self._initial_wallet_address = None
         self._encrypted_wallet_address= None
 
+
+    @property
+    def initial_wallet_address(self):
+        return self._initial_wallet_address
+    
+    @initial_wallet_address.setter 
+    def initial_wallet_address(self, value):
+        self._initial_wallet_address = value
+
+    @property
+    def e(self):
+        return self._e
+
+    @property
+    def d(self):
+        return self._d
+
+    @property
+    def wallet(self):
+        return self._wallet
+
+    @wallet.setter 
+    def wallet(self, value):
+        self._wallet = value 
+
+
     def generateKeyPair(self, PRIME):
         e, d = generateKeys(PRIME)
         self._e = e

@@ -32,18 +32,13 @@ def main():
     FRAGMENT_SIZE = primebits // 8                                              
     participant_names = createFakeNames(NUMBER_OF_VOTERS)
 
-<<<<<<< HEAD
-    wHashes_owner_key_remaining = encryptAndDecrypt(wallet_hashes, FRAGMENT_SIZE, PRIME, keys, participant_names, wallets) 
-    random.shuffle(wallets)
-    votesA, votesB = makeAndCountVotes(wallets, blockchain, NUM_OF_BLOCKS, VOTES_PER_BLOCK)
-=======
     # Voters Setup
     voters = []
     for name, wallet in zip(participant_names, wallets):
         choice = random.choices(["A","B"])
         voter = Voter(name, wallet, choice)
         voter.generateKeyPair(PRIME)
-        voter._initial_wallet_address = voter._wallet.address
+        voter.initial_wallet_address = voter.wallet.address
         voters.append(voter)
 
     encryptAndDecrypt(voters, FRAGMENT_SIZE, PRIME) 
@@ -53,7 +48,6 @@ def main():
     
     random.shuffle(voters) # voter wählen in der regel zufällig und nithct 1:1 in der Reihenfolge in der sie ihre wahlunterlagen erhalten haben
     votesA, votesB = makeAndCountVotes(voters, blockchain, NUM_OF_BLOCKS, VOTES_PER_BLOCK)
->>>>>>> a77e333 (fixed core bug)
     storeBlockChain(blockchain)
     print("Votes A: ", votesA) 
     print("Votes B: ", votesB)

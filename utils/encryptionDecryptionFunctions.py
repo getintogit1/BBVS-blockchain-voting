@@ -41,7 +41,7 @@ def encryptAndDecrypt(voters, FRAGMENT_SIZE, PRIME):
 def encrypt(fragments, voters, PRIME):
     encrypted_chunks = list(fragments)
     for voter in voters:
-        encrypted_chunks = [crypt(frag, voter._e, PRIME) for frag in encrypted_chunks]
+        encrypted_chunks = [crypt(frag, voter.e, PRIME) for frag in encrypted_chunks]
         #random.shuffle(encrypted_chunks)
     #print("CHUNKS", len(encrypted_chunks), encrypted_chunks)
     return encrypted_chunks
@@ -54,7 +54,7 @@ def decrypt(encrypted_chunks, FRAGMENT_SIZE, PRIME, decryption_voters):
     for frag in encrypted_chunks:
         p = frag
         for voter in reversed_voters:
-            p = crypt(p, voter._d, PRIME)
+            p = crypt(p, voter.d, PRIME)
         decrypted.append(p)
     # joine alle Chunks
     return "".join(decrypted).strip()
@@ -62,6 +62,6 @@ def decrypt(encrypted_chunks, FRAGMENT_SIZE, PRIME, decryption_voters):
 
 def updateWalletHashes(voters, VoterWalletHashes):
     for v, h in zip(voters, VoterWalletHashes):
-        v._wallet.address= h
+        v.wallet.address= h
 
 

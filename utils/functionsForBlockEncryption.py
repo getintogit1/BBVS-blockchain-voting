@@ -22,7 +22,6 @@ def littleEndianToInt(b):
 
 def targetToBits(target: int) -> bytes:
     raw_bytes = target.to_bytes(32, "big")
-<<<<<<< HEAD
     raw_bytes = raw_bytes.lstrip(b"\x00")                                    
     if raw_bytes[0] > 0x7F:                                                   
         exponent = len(raw_bytes) + 1
@@ -31,7 +30,6 @@ def targetToBits(target: int) -> bytes:
         exponent = len(raw_bytes)                                              
         coefficient = raw_bytes[:3]                                             
     new_bits = coefficient[::-1] + bytes([exponent])                           
-=======
     raw_bytes = raw_bytes.lstrip(b"\x00")
     if raw_bytes[0] > 0x7F:
         exponent = len(raw_bytes) + 1
@@ -40,5 +38,4 @@ def targetToBits(target: int) -> bytes:
         exponent = len(raw_bytes)
         coefficient = raw_bytes[:3]
     new_bits = coefficient[::-1] + bytes([exponent])
->>>>>>> a77e333 (fixed core bug)
     return new_bits
